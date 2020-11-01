@@ -1,0 +1,24 @@
+---
+dataset:
+  train:
+    root: "hw2_data/p1_data/train_50"
+  valid:
+    root: "hw2_data/p1_data/val_50"
+
+loader:
+  batch_size: 64
+  num_workers: 4
+
+# Adam optimzier
+optim:
+  lr: 0.0001
+
+train:
+  agent: "ClassAgent"
+  exp_name: "vgg16_classification"
+  log_dir: "run"
+  checkpoint_dir: "vgg16_checkpoint"
+  device: "cuda"
+  n_epochs: 100
+  interval: 100
+  resume: false
